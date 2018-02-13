@@ -1,7 +1,7 @@
 ' xmldoc is form level var
 Dim xmlDoc = New Xml.XmlDocument()
 
-Open Theme File
+'Open Theme File
 
         Dim f = New OpenFileDialog With {
             .InitialDirectory = ThemePath,
@@ -21,7 +21,7 @@ Open Theme File
         Next
         f.Dispose()
 
-Get Current Object Color on List Item Selection
+'Get Current Object Color on List Item Selection
 
         LabelColorHeader.Text = ""
 
@@ -40,7 +40,7 @@ Get Current Object Color on List Item Selection
             End If
         Next
 
-Update Selected Object RGB Values
+'Update Selected Object RGB Values
 
         ' update the RGB values for the selected object, leave Alpha alone
         Dim N = xmlDoc.SelectSingleNode("Ableton").ChildNodes(0)
@@ -54,7 +54,7 @@ Update Selected Object RGB Values
             End If
         Next
 
-Save Theme File
+'Save Theme File
 
         Dim xmlStr As String = xmlDoc.innerXML.ToString
 
